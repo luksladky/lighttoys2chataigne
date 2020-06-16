@@ -126,3 +126,17 @@ class RainbowElement(FlashElement):
         self.start_color = start_color
         self.period = period
 
+    def right_edge(self) -> Color:
+        return super().right_edge()
+
+    def left_edge(self) -> Color:
+        return self.start_color
+
+    def is_all_black(self) -> bool:
+        return False
+
+    def get_colors(self) -> List[ColorTime]:
+        return [ColorTime(self.start_color, self.start_time, False)]
+
+
+

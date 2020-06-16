@@ -1,4 +1,66 @@
 bindings:
+  /Users/lukas/Desktop/SCI-FI_3_lidi_4min40sec.ltp:
+    chataigneProjectPath: ''
+    startTime: 8104
+    tracks:
+      LO3-Vstaff-dava:
+        dmx: null
+        include: false
+      LO3-visualstaff-kluk:
+        dmx: null
+        include: false
+      LO3-vstaff-nedava:
+        dmx: null
+        include: false
+      LO_Holka:
+        dmx: null
+        include: false
+      LO_Holka_Stred:
+        dmx: null
+        include: false
+      LO_Holka_druha:
+        dmx: null
+        include: false
+      LO_Holka_prvni:
+        dmx: null
+        include: false
+      LO_Kluk:
+        dmx: null
+        include: false
+      LO_Kluk_Prvni:
+        dmx: null
+        include: false
+      LO_Poi_Holky:
+        dmx: null
+        include: false
+      LO_Poi_Kluci:
+        dmx: null
+        include: false
+      LO_Svetla:
+        dmx: 125
+        include: true
+      LO_Vejire:
+        dmx: null
+        include: false
+      LO_visualpoi_Kluk:
+        dmx: null
+        include: false
+      LO_visualpoi_holky:
+        dmx: null
+        include: false
+      Zebra_Poi_Holky:
+        dmx: null
+        include: false
+      Zebra_Poi_Kluk:
+        dmx: null
+        include: false
+  /Users/lukas/Desktop/TEST-DMX-LT.ltp:
+    chataigneProjectPath: /Users/lukas/Desktop/TEST-DMX-LT.noisette
+    startTime: 3991
+    tracks:
+      Track 1:
+        dmx: 100
+        include: true
   /Users/lukas/Desktop/test export chataigne.ltp:
     chataigneProjectPath: /Users/lukas/Desktop/test export chataigne base.noisette
     startTime: 5994
@@ -8,8 +70,8 @@ bindings:
         include: true
       tohle chci 2:
         dmx: null
-        include: true
+        include: false
       tohle ne:
         dmx: null
         include: false
-lastLtpPath: /Users/lukas/Desktop/test export chataigne.ltp
+lastLtpPath: /Users/lukas/Desktop/TEST-DMX-LT.ltp

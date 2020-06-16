@@ -114,76 +114,15 @@ class ChataigneProject:
 
     def _get_colors(self, elements: List[Element]):
         colors = []
-        last_color = Color(COL_BLACK)
         i = 0
         for element in elements:
             marks = element.get_colors()
-
-            if last_color == element.left_edge() and len(colors) > 0:
-                colors.pop()
 
             for mark in marks:
                 colors += [self._get_color("c " + str(i), mark.color, mark.chataigne_time(), mark.interpolated)]
                 i += 1
 
-            last_color = element.right_edge()
         return colors
-
-    def _get_mapping_dmx(self, layer_address, channel):
-        return {
-            "parameters": [
-                {
-                    "value": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "controlAddress": "/outValue"
-                }
-            ],
-            "niceName": f"{layer_address} ch:{channel}",
-            "editorIsCollapsed": True,
-            "type": "Mapping",
-            "input": {
-                "parameters": [
-                    {
-                        "value": f"/sequences/videoExport/layers/{layer_address}/value",
-                        "controlAddress": "/inputValue"
-                    }
-                ]
-            },
-            "filters": {},
-            "outputs": {
-                "items": [
-                    {
-                        "niceName": "MappingOutput",
-                        "type": "BaseItem",
-                        "commandModule": "dmx",
-                        "commandPath": "",
-                        "commandType": "Set Color",
-                        "command": {
-                            "parameters": [
-                                {
-                                    "value": channel,
-                                    "hexMode": False,
-                                    "controlAddress": "/startChannel"
-                                },
-                                {
-                                    "value": [
-                                        0.0,
-                                        0.0,
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "controlAddress": "/color"
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
-        }
 
     def _get_track_json(self, track: Track):
         return {
@@ -309,6 +248,11 @@ class ChataigneProject:
 
     def _append_modules(self, solution):
         if not "modules" in solution: solution["modules"] = {"items": []}
+        else:
+            for module in solution["modules"]["items"]:
+                if module["niceName"] == "DMX":
+                    return solution
+
         solution["modules"]["items"].append(self._get_dmx_module())
         return solution
 
