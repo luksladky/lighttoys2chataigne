@@ -1,0 +1,15 @@
+bindings:
+  /Users/lukas/Desktop/test export chataigne.ltp:
+    chataigneProjectPath: /Users/lukas/Desktop/test export chataigne base.noisette
+    startTime: 5994
+    tracks:
+      tohle chci 1:
+        dmx: 100
+        include: true
+      tohle chci 2:
+        dmx: null
+        include: true
+      tohle ne:
+        dmx: null
+        include: false
+lastLtpPath: /Users/lukas/Desktop/test export chataigne.ltp

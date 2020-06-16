@@ -1,0 +1,14 @@
+Je potreba stahnout program Miniconda. z https://docs.conda.io/en/latest/miniconda.html
+
+https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.pkg
+Nasledne v terminalu zadat:
+
+
+conda install pyyaml
+conda install -c conda-forge pyside2
+pip install --upgrade pysimpleguiqt
+conda install tqdm
+
+Dale nastavit asociaci na spousteni souboru .sh v terminalu a pak by to melo jit doubleclickem.
+
+
