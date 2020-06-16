@@ -122,6 +122,8 @@ class ChataigneProject:
                 colors += [self._get_color("c " + str(i), mark.color, mark.chataigne_time(), mark.interpolated)]
                 i += 1
 
+        colors += [self._get_color("c " + str(i), COL_BLACK, self.total_time, False)]
+
         return colors
 
     def _get_track_json(self, track: Track):
